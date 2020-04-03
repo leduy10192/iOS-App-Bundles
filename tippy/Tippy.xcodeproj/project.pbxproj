@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ADB6894F2326708D006D4E2B /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB6894F2326708D006D4E2B /* Tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB689522326708D006D4E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB689542326708D006D4E2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADB689562326708D006D4E2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		ADB689462326708D006D4E2B = {
 			isa = PBXGroup;
 			children = (
-				ADB689512326708D006D4E2B /* Tipsy */,
+				ADB689512326708D006D4E2B /* Tippy */,
 				ADB689502326708D006D4E2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		ADB689502326708D006D4E2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADB6894F2326708D006D4E2B /* Tipsy.app */,
+				ADB6894F2326708D006D4E2B /* Tippy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADB689512326708D006D4E2B /* Tipsy */ = {
+		ADB689512326708D006D4E2B /* Tippy */ = {
 			isa = PBXGroup;
 			children = (
 				ADB689522326708D006D4E2B /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
 				ADB689602326708E006D4E2B /* Info.plist */,
 			);
-			path = Tipsy;
+			path = Tippy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADB6894E2326708D006D4E2B /* Tipsy */ = {
+		ADB6894E2326708D006D4E2B /* Tippy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADB689632326708E006D4E2B /* Build configuration list for PBXNativeTarget "Tipsy" */;
+			buildConfigurationList = ADB689632326708E006D4E2B /* Build configuration list for PBXNativeTarget "Tippy" */;
 			buildPhases = (
 				ADB6894B2326708D006D4E2B /* Sources */,
 				ADB6894C2326708D006D4E2B /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Tipsy;
+			name = Tippy;
 			productName = Tipsy;
-			productReference = ADB6894F2326708D006D4E2B /* Tipsy.app */;
+			productReference = ADB6894F2326708D006D4E2B /* Tippy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADB6894A2326708D006D4E2B /* Build configuration list for PBXProject "Tipsy" */;
+			buildConfigurationList = ADB6894A2326708D006D4E2B /* Build configuration list for PBXProject "Tippy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADB6894E2326708D006D4E2B /* Tipsy */,
+				ADB6894E2326708D006D4E2B /* Tippy */,
 			);
 		};
 /* End PBXProject section */
@@ -291,7 +291,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.appbrewery.Tipsy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tippy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -308,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.appbrewery.Tipsy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tippy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,7 +317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADB6894A2326708D006D4E2B /* Build configuration list for PBXProject "Tipsy" */ = {
+		ADB6894A2326708D006D4E2B /* Build configuration list for PBXProject "Tippy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADB689612326708E006D4E2B /* Debug */,
@@ -326,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADB689632326708E006D4E2B /* Build configuration list for PBXNativeTarget "Tipsy" */ = {
+		ADB689632326708E006D4E2B /* Build configuration list for PBXNativeTarget "Tippy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADB689642326708E006D4E2B /* Debug */,
