@@ -9,15 +9,18 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
     var bmiValue = "0.0"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //set view backgroundColor to red
         view.backgroundColor = .red
-        
+        //create components programmatically
         let label = UILabel()
         label.text = bmiValue
+        //indicate location and size of the label
         label.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
+        //put the label onto the screen - the very basic component
         view.addSubview(label)
     }
 }
