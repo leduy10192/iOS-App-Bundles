@@ -65,3 +65,17 @@ let angela = Surgeon(handler: emilio)
 
 emilio.assessSituation()
 emilio.medicalEmergency()
+
+
+protocol CanFly {
+    func fly()
+}
+
+//whenever a class/ struct adopt this extension,
+extension CanFly {
+    func fly(){
+        print("The object takes off into the air.")
+    }
+}
+
+//now when we adopt CanFly, we don't actually have that error that says "we haven't adopted the fly method", because now we got a default implementation that we can fall back on.

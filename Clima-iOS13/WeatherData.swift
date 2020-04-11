@@ -9,17 +9,17 @@
 import Foundation
 
 //our struct must conform to the Decodable protocol, which means our data can decode itself from an external source (JSON)
-struct WeatherData: Decodable {
+struct WeatherData: Codable {
     let name: String
     let main: Main
     let weather: [Weather]
 }
 
-struct Main: Decodable {
+struct Main: Codable {
     //property names must match properties' names in JSON precisely
     let temp: Double
 }
 
-struct Weather: Decodable {
+struct Weather: Codable {
     let id: Int
 }

@@ -7,19 +7,35 @@
 //
 
 import Foundation
+import CoreLocation
+
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    
+    func didFailWithError(error: Error)
+}
+
 
 struct WeatherManager {
     //must add s to http, otherwise will encounter error code= -1022 App Transport Security
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?&appid=090f1f4ff03710765dbfe2dbc13f6b68&units=imperial"
     
+    var delegate: WeatherManagerDelegate?
+    
     func fetchWeather(cityName: String){
         let urlString = "\(weatherURL)&q=\(cityName)"
         // to add San%20Jose modify the code
-        performRequest(urlString: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        performRequest(with: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         print(urlString)
     }
     
-    func performRequest(urlString: String){
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        performRequest(with: urlString)
+        print(urlString)
+    }
+    
+    func performRequest(with urlString: String){
         //Perform 4 steps of networking
         //1. Create a URL (optional) -> use if let
         if let url = URL(string: urlString){
@@ -32,13 +48,16 @@ struct WeatherManager {
             //the data response and error object that it sends us
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!)
+                    //error when lost connection, go underground...
+                        self.delegate?.didFailWithError(error: error!)
                     return
                 }
                 
                 if let safeData = data{
                     //Bug: Call to method 'parseJSON' in closure requires explicit 'self.'
-                    self.parseJSON(weatherData: safeData)
+                    if let weather = self.parseJSON(safeData){
+                        self.delegate?.didUpdateWeather(self, weather: weather)
+                    }
                 }
             }
             
@@ -48,7 +67,7 @@ struct WeatherManager {
 
     }
     
-    func parseJSON(weatherData: Data){
+    func parseJSON(_ weatherData: Data)-> WeatherModel?{
         //first, inform our compiler how our data is structured
         let decoder = JSONDecoder()
         do{
@@ -61,11 +80,15 @@ struct WeatherManager {
             
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
             
-            print( weather.temperatureString)
+//            print( weather.temperatureString)
+            return weather
             
         } catch {
-            print(error)
+            //when our data cannot be decoded b/c wrong json format ...
+            delegate?.didFailWithError(error: error)
+            return nil
         }
+        
     }
 
 }
