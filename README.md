@@ -1,6 +1,11 @@
 # iOS-App-Bundles
 Collection of mini iOS App
 
+## Tippy
+This is a beautiful weather app using Open Weather Api
+
+<img src='http://g.recordit.co/oa1vOqpVAk.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+
 ## BMI Calculator
 This a beautiful bmi calculating app 
 
@@ -11,3 +16,5 @@ This a beautiful bmi calculating app
 This is a beautiful bill splitting, tip calculating app
 
 <img src='http://g.recordit.co/2MPG4h1FtI.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+
+
