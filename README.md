@@ -1,7 +1,7 @@
 # iOS-App-Bundles
 Collection of mini iOS App
 
-## Tippy
+## Clima
 This is a beautiful weather app using Open Weather Api
 
 <img src='http://g.recordit.co/oa1vOqpVAk.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
