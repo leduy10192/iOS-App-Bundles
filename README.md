@@ -1,6 +1,11 @@
 # iOS-App-Bundles
 Collection of mini iOS App
 
+## ByteCoin
+This is a beautiful Bitcoin price reporter
+
+<img src='http://g.recordit.co/qrf3hg5jqw.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+
 ## Clima
 This is a beautiful weather app using Open Weather Api
 
