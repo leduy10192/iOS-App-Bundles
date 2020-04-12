@@ -2,7 +2,7 @@
 Collection of mini iOS App
 
 ## ByteCoin
-This is a beautiful Bitcoin price reporter
+This is a beautiful Bitcoin price reporter using coinApi.io
 
 <img src='http://g.recordit.co/qrf3hg5jqw.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
 
